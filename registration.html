@@ -76,6 +76,18 @@
     color: #aaa;
     margin-bottom: 0;
   }
+
+        .registration-form {
+            max-width: 700px;
+            margin: 70px;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 30px rgba(200, 4, 4, 0.911);
+            border-radius: 70px;
+            font-size: 20px;
+            color: red;
+            
+        }
 </style>
 
 <body class="container">
@@ -137,8 +149,65 @@
     </div>
   </nav> <br><br>
 
-  
+<!-- registration form  -->
 
+  <div class="container">
+    <div class="registration-form">
+      <center> <h1 class="text-center">Bus Travel Agency Registration</h1> <br></center>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="agencyName">Agency Name :</label>
+                <input type="text" class="form-control" id="agencyName" placeholder="Enter agency name" required> <br>
+            </div>
+            <div class="form-group">
+                <label for="ownerName">Owner Name:</label>
+                <input type="text" class="form-control" id="ownerName" placeholder="Enter owner name" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" required>
+            </div><br>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea class="form-control" id="address" rows="3" placeholder="Enter address" required></textarea>
+            </div><br>
+
+            <div class="form-group">
+                <label for="licenseNumber">License Number:</label>
+                <input type="text" class="form-control" id="licenseNumber" placeholder="Enter license Number" required>
+            </div><br>
+
+            <div class="form-group">
+              <label for="licenseNumber">Register Bus Number:</label>
+              <input type="text" class="form-control" id="licenseNumber" placeholder="Enter Register Bus  Number (eg. MH 09 AA 0007)" required>
+          </div><br>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button type="submit" class="btn btn-danger">Register</button>
+          </div>
+            
+        </form>
+    </div><br>
+</div>
+
+<!-- <script> -->
+<script>
+  document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      if (this.checkValidity()) {
+          alert('Form submitted successfully!');
+      } else {
+          alert('Please fill out all fields correctly.');
+      }
+  });
+</script>
+<br><br><br><br><br><br><br><br><br><br><br><br>
   <!-- footer  -->
   <div class="footer-basic">
     <footer>
